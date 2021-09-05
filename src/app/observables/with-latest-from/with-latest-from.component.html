@@ -1,0 +1,41 @@
+<div class="my-3">
+  <h2>withLatestFrom<a href="https://www.learnrxjs.io/learn-rxjs/operators/combination/withlatestfrom" target="_blank"
+    ><img
+      src="../../../assets/link.gif"
+      width="25"
+      height="25"
+      style="margin-left: 5px; cursor: pointer"
+    />
+  </a></h2>
+  <br>
+  <div class="row">
+    <div class="col-md-3 pr-4">
+      <strong
+      > Select the options</strong>
+      <hr>
+      <sub>Master Observable</sub>
+      <br>
+<select class="form-control" #month>
+  <option selected disabled>Select a month</option>
+  <option *ngFor="let item of months" value="{{item}}">{{item}}</option>
+</select>
+<br>
+<br>
+<sub>Slave Observable</sub>
+<br>
+<select class="form-control" #year>
+  <option selected disabled>Select a year</option>
+  <option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+</select>
+<br>
+<br>
+    </div>
+    <div class="col-md-4 ml-auto">
+      <strong>withLatestFrom</strong>
+      <hr>
+      <div class="wrapper">
+        <ul id="container1"></ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -31,6 +31,12 @@ import { ConcatMapComponent } from './observables/concat-map/concat-map.componen
 import { SwitchMapComponent } from './observables/switch-map/switch-map.component';
 import { CompareMergeSwitchConcatmapComponent } from './observables/compare-merge-switch-concatmap/compare-merge-switch-concatmap.component';
 import { ExhaustMapComponent } from './observables/exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './observables/share-replay/share-replay.component';
+import { CombineLatestComponent } from './observables/combine-latest/combine-latest.component';
+import { WithLatestFromComponent } from './observables/with-latest-from/with-latest-from.component';
+import { ZipComponent } from './observables/zip/zip.component';
+import { ForkJoinComponent } from './observables/fork-join/fork-join.component';
+import { CatchThrowErrorComponent } from './observables/catch-throw-error/catch-throw-error.component';
 
 const routes: Routes = [
   {
@@ -62,7 +68,7 @@ const routes: Routes = [
       { path: 'retry', component: RetryComponent },
       { path: 'retryWhen', component: RetryWhenComponent },
       { path: 'debounceTime', component: DebounceTImeComponent },
-      { path: 'distinctUntilChnaged', component: DistinctUntilChangedComponent},
+      { path: 'distinctUntilChanged', component: DistinctUntilChangedComponent},
       { path:'behaviourSubject',component:BehaviourSubjectComponent},
       { path:'replaySubject',component:ReplaySubjectComponent},
       { path:'asyncSubject',component:AsyncSubjectComponent},
@@ -72,7 +78,13 @@ const routes: Routes = [
       { path:'concatMap',component:ConcatMapComponent},
       {path:'switchMap',component:SwitchMapComponent},
       {path:'compare',component:CompareMergeSwitchConcatmapComponent},
-      {path:'exhaustMap',component:ExhaustMapComponent}
+      {path:'exhaustMap',component:ExhaustMapComponent},
+      {path:'shareReplay',component:ShareReplayComponent},
+      {path:'combineLatest',component:CombineLatestComponent},
+      {path:'withLatestFrom',component:WithLatestFromComponent},
+      {path:'zip',component:ZipComponent},
+      {path:'forkJoin',component:ForkJoinComponent},
+      {path:'catchErrorThrowError',component:CatchThrowErrorComponent}
     ],
   },
 

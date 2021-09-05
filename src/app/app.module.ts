@@ -40,6 +40,14 @@ import { SwitchMapComponent } from './observables/switch-map/switch-map.componen
 import { CompareMergeSwitchConcatmapComponent } from './observables/compare-merge-switch-concatmap/compare-merge-switch-concatmap.component';
 import { ExhaustMapComponent } from './observables/exhaust-map/exhaust-map.component';
 import { ShareReplayComponent } from './observables/share-replay/share-replay.component';
+import { ShareReplayChild2Component } from './observables/share-replay-child2/share-replay-child2.component';
+import { ShareReplayChild1Component } from './observables/share-replay-child1/share-replay-child1.component';
+import { CombineLatestComponent } from './observables/combine-latest/combine-latest.component';
+import { WithLatestFromComponent } from './observables/with-latest-from/with-latest-from.component';
+import { ZipComponent } from './observables/zip/zip.component';
+import { ForkJoinComponent } from './observables/fork-join/fork-join.component';
+import { CatchThrowErrorComponent } from './observables/catch-throw-error/catch-throw-error.component';
+
 
 @NgModule({
   declarations: [
@@ -80,6 +88,13 @@ import { ShareReplayComponent } from './observables/share-replay/share-replay.co
     CompareMergeSwitchConcatmapComponent,
     ExhaustMapComponent,
     ShareReplayComponent,
+    ShareReplayChild2Component,
+    ShareReplayChild1Component,
+    CombineLatestComponent,
+    WithLatestFromComponent,
+    ZipComponent,
+    ForkJoinComponent,
+    CatchThrowErrorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

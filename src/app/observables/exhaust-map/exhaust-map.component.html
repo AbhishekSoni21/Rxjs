@@ -11,6 +11,7 @@
       />
     </a>
   </h3>
+  <sub>**open console and network tab to observe the behaviour</sub>
   <br />
   <br />
   <div class="row">
@@ -22,7 +23,7 @@
           <strong>Click to save response</strong>
         </div>
         <div class="card-body">
-          <button class="btn btn-success" (click)="handleSave()">Save</button>
+          <button class="btn btn-success" (click)="handleSave()" #but>Save</button>
         </div>
       </div>
     </div>
@@ -32,7 +33,7 @@
       <hr />
       <div class="card">
         <div class="card-header">
-          <strong>Response : </strong>{{num}}
+          <strong>Response : </strong>{{value}}
         </div>
         <div class="card-body">
           <ul id="customContainer2" class="list">
