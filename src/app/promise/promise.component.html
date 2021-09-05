@@ -1,0 +1,84 @@
+<div class="container-fluid my-3">
+  <h3>Promise</h3>
+  <br />
+  <h5>Admin Section</h5>
+  <hr />
+  <strong>Choose which laptop is in stock</strong>
+  <div class="mt-3 mx-3">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="exampleRadios"
+        id="exampleRadios1"
+        value="Dell"
+        checked
+        #laptop
+      />
+      <label class="form-check-label" for="exampleRadios1"> Dell </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="exampleRadios"
+        id="exampleRadios2"
+        value="Hp"
+        #laptop1
+      />
+      <label class="form-check-label" for="exampleRadios2"> Hp </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="exampleRadios"
+        id="exampleRadios3"
+        value="Not Available"
+        #laptop2
+      />
+      <label class="form-check-label" for="exampleRadios3">
+        None of the above is available
+      </label>
+    </div>
+  </div>
+
+  <h5 class="mt-5">Customer Section</h5>
+  <hr />
+  <div class="d-flex align-items-center" style="max-height: 30px">
+    <strong>Click to buy a laptop</strong
+    ><button
+      *ngIf="showButton"
+      class="btn btn-primary mx-2"
+      (click)="
+        handleClick(
+          laptop.checked
+            ? laptop.value
+            : laptop1.checked
+            ? laptop1.value
+            : laptop2.checked
+            ? laptop2.value
+            : ''
+        )
+      "
+    >
+      Buy
+    </button>
+    <div
+      *ngIf="!showButton"
+      class="spinner-grow text-primary mx-2"
+      style="width: 3rem; height: 3rem"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div class="mt-2">
+    <strong
+      [ngClass]="{ 'text-success': available, 'text-danger': !available }"
+      >{{ promiseValue }}</strong
+    >
+  </div>
+</div>
+<sub class="mx-3">**Open developer's console for better clarity </sub>

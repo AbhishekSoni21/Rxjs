@@ -1,0 +1,116 @@
+<div class="my-3">
+  <h3>
+    map<a
+      href="http://reactivex.io/documentation/operators/map.html
+            "
+      target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Example 1</strong>
+      <hr />
+      <sub
+        >** text entered will be appended in the response
+        <input
+          [value]="appendText1"
+          type="text"
+          (change)="handlechange($event)"
+          #t1
+      /></sub>
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Map : </strong>'Text entered' + data<button
+            type="button"
+            (click)="toggle()"
+            class="btn btn-primary"
+            style="float: right"
+          >
+            {{ sub1 ? "Unsubscribe" : "Subscribe" }}
+          </button>
+        </div>
+        <div class="card-body">
+          <ul id="customContainer" class="list">
+            Response
+            <span class="text-success"
+              ><strong>{{ data1 }}</strong></span
+            >
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="col-md-6">
+      <strong>Example 2</strong>
+      <hr />
+      <sub
+        >** value entered will be multiplied with emitted response
+        <input
+          [value]="appendText2"
+          type="number"
+          (change)="handlechange2($event)"
+          #t2
+      /></sub>
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Map : </strong>'Value entered' * data = result
+          <button
+            type="button"
+            (click)="toggle2()"
+            class="btn btn-primary"
+            style="float: right"
+          >
+            {{ sub2 ? "Unsubscribe" : "Subscribe" }}
+          </button>
+        </div>
+        <div class="card-body">
+          <ul id="customContainer2" class="list">
+            <li id="tableRenderer" class="remove-dot"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <br />
+      <strong>Example 3</strong>
+      <hr />
+      <sub
+        >** data is emitted with an interval of
+        <select (change)="handleChange3($event)">
+          <option value="name" default>Name</option>
+          <option value="city">City</option>
+          <option value="state">State</option>
+        </select>
+      </sub>
+
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header" ng-non-bindable>
+          <strong>Map : </strong>Displaying value for respective object key
+          <br />
+          <strong>Sample Data : </strong>[&#123;name: 'Abhishek Soni', city:
+          'Deoria', state: 'Uttar Pradesh'&#125;]
+        </div>
+        <div class="card-body">
+          <p>{{ appendText3 | titlecase }} :</p>
+          <ul id="objectcontainer"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

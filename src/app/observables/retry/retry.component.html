@@ -1,0 +1,122 @@
+<div class="my-3">
+  <h3>
+    retry<a
+      href="https://www.learnrxjs.io/learn-rxjs/operators/error_handling/retry"
+      target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Example 1</strong>
+      <hr />
+      <sub
+        >**value entered will the retry count after first API call
+        <input
+          type="number"
+          [value]="retryValue"
+          (change)="
+            handleChange(
+              $event,
+              errorVal.checked ? true : false,
+              errorVal1.checked ? true : false
+            )
+          "
+        />
+      </sub>
+      <br />
+      <sub>** open Dev Console to see the failed request </sub>
+      <br />
+      <br />
+      <div>
+        Want to trigger error in API Call<label
+          ><input
+            style="margin-left: 10px"
+            type="radio"
+            name="error"
+            id=""
+            [value]="errorValue"
+            checked
+            #errorVal
+            (change)="fetchData(errorVal.checked, errorVal1.checked)"
+          />Yes</label
+        ><label
+          ><input
+            style="margin-left: 10px"
+            type="radio"
+            name="error"
+            id=""
+            [value]="errorValue1"
+            #errorVal1
+            (change)="fetchData(errorVal.checked, errorVal1.checked)"
+          />No</label
+        >
+      </div>
+
+      <br />
+      <strong>Status : </strong>
+      <span
+        [ngClass]="{
+          'text-warning': loading,
+          'text-success': status,
+          'text-danger': status != null && !status
+        }"
+      >
+        {{ loading ? "Loading Data... " : status ? this.msg : this.msg }}
+      </span>
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Retry</strong>
+          <button
+            class="btn btn-primary"
+            type="button"
+            style="float: right"
+            (click)="
+              fetchData(
+                errorVal.checked ? true : false,
+                errorVal1.checked ? true : false
+              )
+            "
+          >
+            <span
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+              *ngIf="loading"
+            ></span>
+            {{ loading ? "Loading Data... " : "Fetch Data" }}
+          </button>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Username</td>
+                <td>Password</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of users">
+                <td>{{ d.id }}</td>
+                <td>{{ d.userName }}</td>
+                <td>{{ d.password }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+</div>

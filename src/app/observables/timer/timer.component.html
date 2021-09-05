@@ -1,0 +1,37 @@
+<div class="my-3">
+  <h3>
+    Timer<a href="https://rxjs.dev/api/index/function/timer" target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+  <sub class="mx-3"
+    >**delay time is 3 seconds and scheduled time interval is 1 second between
+    each data emission</sub
+  >
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <strong>Videos Emitted</strong
+          ><button
+            style="margin-left: 190px"
+            class="btn btn-primary"
+            (click)="!hideButton ? unSubscribe() : subscribe()"
+          >
+            {{ !hideButton ? "Unsubscribe" : "Subscribe" }}
+          </button>
+        </div>
+        <div class="card-body">
+          <ul id="videoContainer"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

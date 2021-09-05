@@ -1,0 +1,74 @@
+<div class="my-3">
+  <h3>
+    toArray<a
+      href="https://rxjs.dev/api/operators/toArray
+        "
+      target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+  <strong>Example 1</strong>
+  <hr />
+  <sub>** interval of 1 seconds is applied along with maximum 5 data</sub>
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Video Emitted</strong>
+        </div>
+        <div class="card-body">
+          <ul id="ofvideoContainer">
+            <li *ngFor="let d of arrayData">{{ d }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <strong>Example 2</strong>
+  <hr />
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Data Emitted</strong>
+        </div>
+        <div class="card-body">
+          <ul id="ofvideoContainer1">
+            <li *ngFor="let d of arrayData2">
+              {{ d.name }}
+              is a
+              {{ d.skill }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <strong>Example 3</strong>
+  <hr />
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Month Emitted</strong>
+        </div>
+        <div class="card-body">
+          <ul id="ofvideoContainer1">
+            <li *ngFor="let d of arrayData3">
+              {{ d }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

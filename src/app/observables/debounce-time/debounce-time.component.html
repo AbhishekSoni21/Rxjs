@@ -1,0 +1,97 @@
+<div class="my-3">
+    <h3>
+      debounceTime<a href="https://www.learnrxjs.io/learn-rxjs/operators/filtering/debouncetime" target="_blank"
+        ><img
+          src="../../../assets/link.gif"
+          width="25"
+          height="25"
+          style="margin-left: 5px; cursor: pointer"
+        />
+      </a>
+    </h3>
+
+    <br />
+    <br />
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Example 1</strong>
+        <hr />
+        <sub
+          >**value entered will be the delay(in sec) in making API request
+          <input
+            type="number"
+            [value]="delayTime"
+            disabled
+          />
+        </sub>
+        <br/>
+        <sub>** delay time entered in debounceTime is evaluated only once i.e at observable creation time</sub>
+        <br />
+        <br/>
+        <div class="card">
+          <div class="card-header">
+            <strong>DebounceTime</strong>
+
+          </div>
+          <br/>
+          <div class="container">
+            <div class="row">
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Search</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputPassword" #myInput placeholder="Enter a parameter">
+                </div>
+            </div>
+          </div>
+          <div>
+            <span *ngIf="reqData.length>0" class="text-success"><strong>Requested Data : </strong>{{reqData}}</span>
+          </div>
+          <br/>
+        </div>
+
+        </div>
+        <br/>
+      </div>
+      <div class="col-md-6">
+        <strong>Example 2</strong>
+        <hr />
+        <sub
+          >**value entered will be the delay(in sec) in making API request
+          <input
+            type="number"
+            [value]="delayTime"
+            (change)="
+              handleDelayChange($event)"
+          />
+        </sub>
+        <br/>
+        <sub>** to dynamically handle delay use debounce with timer </sub>
+        <br />
+        <br/>
+        <div class="card">
+          <div class="card-header">
+            <strong>Debounce</strong>
+
+          </div>
+          <br/>
+          <div class="container">
+            <div class="row">
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Search</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputPassword" #myInput2 placeholder="Enter a parameter">
+                </div>
+            </div>
+          </div>
+          <div>
+            <span *ngIf="reqData2.length>0" class="text-success"><strong>Requested Data : </strong>{{reqData2}}</span>
+          </div>
+          <br/>
+        </div>
+
+        </div>
+        <br/>
+      </div>
+      <br />
+    </div>
+  </div>

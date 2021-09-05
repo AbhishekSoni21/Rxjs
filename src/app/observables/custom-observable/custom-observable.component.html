@@ -1,0 +1,170 @@
+<div class="my-3">
+  <h3>
+    Custom Observable<a
+      href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-create
+          "
+      target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Example 1</strong>
+      <hr />
+      <sub
+        >** data is emitted with an initial delay of
+        <input
+          [value]="time1"
+          type="number"
+          (change)="handlechange($event)"
+          min="1"
+          max="5"
+          [disabled]="hide"
+          #t1
+        />{{ t1.value === "1" ? " second" : " seconds" }}</sub
+      >
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <!-- {{ errorState }}-{{ completeState }} -->
+          <strong>Manual Data Emitted</strong
+          ><button
+            *ngIf="!hide"
+            type="button"
+            (click)="toggle()"
+            class="btn btn-primary"
+            style="float: right"
+          >
+            Click to {{ error ? "make success" : "generate error" }}
+          </button>
+        </div>
+        <div class="card-body">
+          <ul
+            id="customContainer"
+            class="list"
+            [ngClass]="{
+              error: errorState === true,
+              success: completeState === true
+            }"
+          >
+            <!-- <li *ngFor="let d of arrayData">{{ d }}</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- <div class="row"> -->
+    <div class="col-md-6">
+      <strong>Example 2</strong>
+      <hr />
+      <sub
+        >** data is emitted with an interval of
+        <input
+          [value]="time2"
+          type="number"
+          (change)="handlechange2($event)"
+          min="1"
+          max="5"
+          #t2
+        />{{ t2.value === "1" ? " second" : " seconds" }}</sub
+      >
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Custom Interval Observable</strong
+          ><button
+            type="button"
+            (click)="handleSubscribe()"
+            class="btn btn-primary"
+            style="float: right"
+          >
+            {{ sub ? "Unsubscribe" : "Subscribe" }}
+          </button>
+        </div>
+        <div class="card-body">
+          <ul id="customContainer2" class="list">
+            <!-- <li *ngFor="let d of arrayData2"> -->
+            <!-- {{ d.name }}
+                is a
+                {{ d.skill }} -->
+            <!-- </li> -->
+          </ul>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <!-- <div class="row"> -->
+    <div class="col-md-6">
+      <br />
+      <strong>Example 3</strong>
+      <hr />
+      <sub
+        >** data is emitted with an interval of
+        <input
+          [value]="time3"
+          type="number"
+          (change)="handlechange3($event)"
+          min="1"
+          max="5"
+          [disabled]="hide3"
+          #t3
+        />{{ t3.value === "1" ? " second" : " seconds" }}</sub
+      >
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Random Names : </strong>
+          'Angular','React','Typescript','Javascript','NodeJs'<button
+            *ngIf="!hide3"
+            type="button"
+            (click)="toggle3()"
+            class="btn btn-primary"
+            style="float: right"
+          >
+            Click to {{ error3 ? "make success" : "generate error" }}
+          </button>
+        </div>
+        <div class="card-body">
+          <p>
+            Current Name :
+            <strong class="">{{ randomName }}</strong>
+          </p>
+          <span
+            class="badge bg-primary"
+            [ngClass]="{
+              'bg-danger': errorState3 === true,
+              'bg-success': completeState3 === true
+            }"
+            >{{
+              !errorState3 && !completeState3
+                ? "In Progess"
+                : !errorState3 && completeState3
+                ? "Success"
+                : errorState3 && !completeState3
+                ? "Error"
+                : null
+            }}</span
+          >
+          <ul id="ofvideoContainer1">
+            <!-- <li *ngFor="let d of arrayData3"> -->
+            <!-- {{ d }}
+              </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>

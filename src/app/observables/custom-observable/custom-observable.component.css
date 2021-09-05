@@ -1,0 +1,26 @@
+ul.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.list > li {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 13px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+ul.list.error li {
+  color: red;
+  background: rgba(255, 0, 0, 0.08);
+  border-color: red;
+}
+
+ul.list.success li {
+  color: green;
+  background: rgba(0, 255, 0, 0.08);
+  border-color: green;
+}

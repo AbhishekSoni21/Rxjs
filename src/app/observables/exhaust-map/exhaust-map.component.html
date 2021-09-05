@@ -1,0 +1,44 @@
+<div class="my-3">
+  <h3>
+    exhaustMap<a
+      href="https://www.learnrxjs.io/learn-rxjs/operators/transformation/exhaustmap"
+      target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Request Form</strong>
+      <hr />
+      <div class="card">
+        <div class="card-header">
+          <strong>Click to save response</strong>
+        </div>
+        <div class="card-body">
+          <button class="btn btn-success" (click)="handleSave()">Save</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="col-md-4">
+      <strong>Saved response</strong>
+      <hr />
+      <div class="card">
+        <div class="card-header">
+          <strong>Response : </strong>{{num}}
+        </div>
+        <div class="card-body">
+          <ul id="customContainer2" class="list">
+          </ul>
+        </div>
+      </div>
+    </div>
+  <br>
+</div>

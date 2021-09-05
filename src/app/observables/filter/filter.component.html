@@ -1,0 +1,148 @@
+<div class="my-3">
+  <h3>
+    filter<a
+      href="https://rxjs.dev/api/operators/filter
+                "
+      target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Example 1</strong>
+      <hr />
+      <sub
+        >** value entered will be used to filter data
+        <input
+          [value]="appendText1"
+          type="number"
+          (change)="handleChange($event)"
+        />
+      </sub>
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Filter : </strong>By Property (name) having length greater
+          than equal to
+          {{ appendText1 }}
+          <br />
+          <strong>Sample Data : </strong>[&#123;id: 1, name: 'Abhishek Soni',
+          gender: 'male'&#125;]
+        </div>
+        <div class="card-body">
+          <!-- <ul id="pluckContainer" class="list">
+            <li *ngFor="let d of data1">{{ d.name }}</li>
+          </ul> -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of data1">
+                <td>{{ d.id }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.gender | titlecase }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- <div class="row"> -->
+    <div class="col-md-6">
+      <strong>Example 2</strong>
+      <hr />
+      <sub
+        >** option selected will be used to filter data
+        <select (change)="handleChange2($event)">
+          <option value="male" default>Male</option>
+          <option value="female">Female</option>
+        </select>
+      </sub>
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Filter : </strong>By Gender -
+          {{ appendText2 | titlecase }}
+          <br />
+          <strong>Sample Data : </strong>[&#123;id: 1, name: 'Abhishek Soni',
+          gender: 'male'&#125;]
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of data2">
+                <td>{{ d.id }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.gender | titlecase }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <strong>Example 3</strong>
+      <hr />
+      <sub
+        >** value entered will be used to filter data
+        <input
+          [value]="appendText3"
+          type="number"
+          (change)="handleChange3($event)"
+        />
+      </sub>
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Filter : </strong>By n<sup>th</sup> Id -
+          {{ appendText3 }}
+          <br />
+          <strong>Sample Data : </strong>[&#123;id: 1, name: 'Abhishek Soni',
+          gender: 'male'&#125;]
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of data3">
+                <td>{{ d.id }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.gender | titlecase }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

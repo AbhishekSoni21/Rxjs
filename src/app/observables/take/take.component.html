@@ -1,0 +1,50 @@
+<div class="my-3">
+  <h3>
+    take<a href="https://rxjs.dev/api/operators/take" target="_blank"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <p
+        class="bg-light py-3 px-3 border rounded"
+        style="word-break: break-word"
+      >
+        <strong>Data : </strong>Yellow, Blue, Red, Green, Black, Brown, Azure,
+        Teal, Silver, Purple, Navy blue, Pea green, Gray, Orange, Maroon,
+        Charcoal, Aquamarine, Coral, Fuchsia, Wheat, Lime, Crimson, Khaki, Hot
+        pink, Magenta, Olden, Plum, Olive, Cyan
+      </p>
+      <br />
+      <strong>Example 1</strong>
+      <hr />
+      <sub
+        >** value entered will be taken as a limit that will be emitted from the
+        source
+        <input
+          type="number"
+          [value]="appendText1"
+          (change)="handleChange($event)"
+      /></sub>
+      <br />
+      <br />
+      <div class="card">
+        <div class="card-header">
+          <strong>Take</strong>
+        </div>
+        <div class="card-body">
+          <ul id="takeContainer" class="list"></ul>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="my-3">
+  <h3>
+    ReplaySubject<a href="https://rxjs.dev/api/index/class/ReplaySubject"
+      ><img
+        src="../../../assets/link.gif"
+        width="25"
+        height="25"
+        style="margin-left: 5px; cursor: pointer"
+      />
+    </a>
+  </h3>
+<br/>
+<form class="row g-3 justify-content-center" onsubmit="javascript:return false">
+  <div class="col-auto ">
+    <input type="text" class="form-control" id="inputPassword2" placeholder="Enter a Value" #addfield>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary mb-3" (click)="onAdd(addfield.value)">Add</button>
+  </div>
+</form>
+<sub>**On subscribing it will bring the last three value from the stream</sub>
+<br/>
+<br/>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Channel 1</strong>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let item of datasource1">
+          <strong>{{item}}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <strong>Channel 2</strong><button [ngClass]="{'btn-success':subscribeChannel2,'btn-danger':!subscribeChannel2}" class="btn" style="float: right;" (click)="handleSubscribe2()">{{subscribeChannel2?'Subscribe':'Unsubscribe'}}</button>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let item of datasource2">
+          <strong>{{item}}</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <strong>Channel 3</strong><button [ngClass]="{'btn-success':subscribeChannel3,'btn-danger':!subscribeChannel3}" class="btn" style="float: right;" (click)="handleSubscribe3()">{{subscribeChannel3?'Subscribe':'Unsubscribe'}}</button>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let item of datasource3">
+          <strong>{{item}}</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
