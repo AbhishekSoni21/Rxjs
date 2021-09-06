@@ -88,13 +88,11 @@ export class FilterComponent implements OnInit, OnDestroy {
 
   handleChange2(e) {
     this.appendText2 = e.target.value;
-    console.log('app', this.appendText2);
     this.startSubscription2();
   }
 
   handleChange3(e) {
     this.appendText3 = e.target.value;
-    console.log('app', this.appendText2);
     this.startSubscription3();
   }
 
@@ -118,7 +116,6 @@ export class FilterComponent implements OnInit, OnDestroy {
         toArray()
       )
       .subscribe((res) => {
-        console.log('res', res);
         this.data2 = res;
       });
   }
@@ -131,7 +128,6 @@ export class FilterComponent implements OnInit, OnDestroy {
         toArray()
       )
       .subscribe((res) => {
-        console.log('res3', res);
         this.data3 = res;
       });
   }

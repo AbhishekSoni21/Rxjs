@@ -24,9 +24,6 @@ export class ToArrayComponent implements OnInit {
     let subscription = interval(1000);
 
     subscription.pipe(take(5), toArray()).subscribe((response) => {
-      // this.utility.addElements('ofvideoContainer', 'video ' + (response+1);
-      console.log(response);
-
       this.arrayData = response.map((data) => 'Video ' + (data + 1));
     });
 

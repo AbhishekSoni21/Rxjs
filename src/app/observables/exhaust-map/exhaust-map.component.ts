@@ -22,7 +22,6 @@ export class ExhaustMapComponent implements OnInit,AfterViewInit {
 
   ngAfterViewInit(){
     fromEvent(this.btn.nativeElement,'click').pipe(exhaustMap(()=>this.saveRequest(this.num++))).subscribe(res=>{
-      console.log("data",res);
       this.value=res['name']
 
       // concatMap(()=>this.saveRequest(this.num++))
@@ -36,9 +35,6 @@ export class ExhaustMapComponent implements OnInit,AfterViewInit {
   handleSave(){
     // this.num++;
     // this.saveRequest(this.num).subscribe(res=>{
-    //   console.log("response is",res);
-
-
     // })
   }
 

@@ -58,8 +58,6 @@ export class TakeLastComponent implements OnInit, OnDestroy {
     this.startSubscription();
   }
   startSubscription() {
-    console.log(1);
-
     const emitVideo = from(this.sampleData);
 
     this.subscribe = emitVideo

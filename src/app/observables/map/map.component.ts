@@ -39,7 +39,6 @@ export class MapComponent implements OnInit, OnDestroy {
 
   handleChange3(e) {
     this.appendText3 = e.target.value;
-    console.log('eeee', e);
     this.utilityService.removeChild('objectcontainer');
     this.startSubscription3();
   }
@@ -124,8 +123,6 @@ export class MapComponent implements OnInit, OnDestroy {
     from(sampleData)
       .pipe(map((data) => data[this.appendText3]))
       .subscribe((res) => {
-        console.log('33', this.appendText3);
-
         this.utilityService.addElements('objectcontainer', res);
       });
   }

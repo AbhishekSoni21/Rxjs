@@ -81,14 +81,12 @@ export class PluckComponent implements OnInit, OnDestroy {
   handleChange(e) {
     this.appendText1 = e.target.value;
     this.utilityService.removeChild('pluckContainer');
-    console.log('app', this.appendText1);
     this.startSubscription();
   }
 
   handleChange2(e) {
     this.appendText2 = e.target.value;
     this.utilityService.removeChild('pluckContainer2');
-    console.log('app', this.appendText1);
     this.startSubscription2();
   }
 
@@ -115,7 +113,6 @@ export class PluckComponent implements OnInit, OnDestroy {
     const emitData = from(this.sampleData);
 
     this.subscribe = emitData.pipe(pluck(this.appendText1)).subscribe((res) => {
-      console.log('res', res);
 
       this.utilityService.addElements('pluckContainer', res);
     });
@@ -127,8 +124,6 @@ export class PluckComponent implements OnInit, OnDestroy {
     this.subscribe = emitData
       .pipe(pluck('job', this.appendText2))
       .subscribe((res) => {
-        console.log('res', res);
-
         this.utilityService.addElements('pluckContainer2', res);
       });
   }

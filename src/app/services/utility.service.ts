@@ -60,8 +60,6 @@ export class UtilityService {
   }
 
   errorHandler(error){
-    console.log("error",error);
-
     return throwError(error)
   }
 }

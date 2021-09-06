@@ -21,7 +21,6 @@ export class ConcatComponent implements OnInit {
     const source3 =interval(1000).pipe(map(o=>furnitures[o]),take(5));
     const final=concat(source,source2,source3)
     final.subscribe(res=>{
-console.log("res", );
 this.utility.addElements("customContainer",res)
 
     })
