@@ -29,7 +29,10 @@ export class DistinctUntilChangedComponent implements AfterViewInit,OnDestroy {
   }
 
   ngOnDestroy(){
-    this.subscribe1.unsubscribe();
+    if( this.subscribe1){
+      this.subscribe1.unsubscribe();
+
+    }
   }
 
 }

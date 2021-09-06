@@ -87,6 +87,9 @@ export class TapComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscribe.unsubscribe();
+    if(this.subscribe){
+      this.subscribe.unsubscribe();
+
+    }
   }
 }

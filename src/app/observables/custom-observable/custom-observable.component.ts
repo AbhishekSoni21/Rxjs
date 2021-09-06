@@ -185,6 +185,8 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.customObservable2.unsubscribe();
+    if(this.customObservable2){
+      this.customObservable2.unsubscribe();
+    }
   }
 }

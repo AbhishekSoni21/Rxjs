@@ -43,8 +43,14 @@ export class DebounceTImeComponent implements AfterViewInit,OnDestroy{
   }
 
   ngOnDestroy(){
-    this.subscribe1.unsubscribe();
-    this.subscribe2.unsubscribe();
+    if(this.subscribe1){
+      this.subscribe1.unsubscribe();
+
+    }
+    if(this.subscribe2){
+      this.subscribe2.unsubscribe();
+
+    }
   }
 
 }
