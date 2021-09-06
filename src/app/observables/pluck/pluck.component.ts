@@ -121,7 +121,7 @@ export class PluckComponent implements OnInit, OnDestroy {
   startSubscription2() {
     const emitData = from(this.sampleData);
 
-    this.subscribe = emitData
+    this.subscribe2 = emitData
       .pipe(pluck('job', this.appendText2))
       .subscribe((res) => {
         this.utilityService.addElements('pluckContainer2', res);

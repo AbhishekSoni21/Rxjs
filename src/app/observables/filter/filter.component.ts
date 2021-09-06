@@ -110,7 +110,7 @@ export class FilterComponent implements OnInit, OnDestroy {
 
   startSubscription2() {
     const emitData = from(this.sampleData);
-    this.subscribe = emitData
+    this.subscribe2 = emitData
       .pipe(
         filter((data) => data.gender === this.appendText2),
         toArray()
@@ -122,7 +122,7 @@ export class FilterComponent implements OnInit, OnDestroy {
 
   startSubscription3() {
     const emitData = from(this.sampleData);
-    this.subscribe = emitData
+    this.subscribe3 = emitData
       .pipe(
         filter((data) => data.id <= this.appendText3),
         toArray()
